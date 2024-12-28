@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+    </style>
+    <script>
+    </script>
+</head>
+<script type="text/javascript">
+$(function() {
+    //请求参数
+    var list = {};
+    //
+    $.ajax({
+        //请求方式
+        type: "get",
+        // dataType: "jsonp",
+        //请求的媒体类型
+        contentType: "application/json;charset=UTF-8",
+        //请求地址
+        url: "http://api.map.baidu.com/location/ip?ak=3U8ProCsyQ5yzPRc0OP19vYcVE6BLEq8",
+        //数据，json字符串
+        // data : JSON.stringify(list),
+        //请求成功
+        success: function(result) {
+            console.log(result);
+        },
+        //请求失败，包含具体的错误信息
+        error: function(e) {
+
+        }
+    });
+});
+</script>
+</head>
+
+<body>
+</body>
+</body>
+
+</html>
